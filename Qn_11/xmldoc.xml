@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsldoc.xsl"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<college>
+        <student>
+            <name>Priya</name>
+            <dept>CSE</dept>
+            <mark>98</mark>
+        </student>
+        <student>
+            <name>Airaa</name>
+            <dept>Mech</dept>
+            <mark>38</mark>
+        </student>
+        <student>
+            <name>Ashwin</name>
+            <dept>ECE</dept>
+            <mark>99</mark>
+        </student>
+</college>
+

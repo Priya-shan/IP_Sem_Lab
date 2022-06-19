@@ -1,0 +1,16 @@
+<books>
+    <book>
+        <title>HarryPotter</title>
+        <isbn>1234</isbn>
+        <author>rowling</author>
+        <publisher>jk</publisher>
+        <price>1500</price>
+    </book>
+    <book>
+        <title>two states</title>
+        <isbn>9876</isbn>
+        <author>chetan</author>
+        <publisher>bh</publisher>
+        <price>1500</price>
+    </book>
+</books>

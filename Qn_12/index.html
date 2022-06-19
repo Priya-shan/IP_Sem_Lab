@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <body>
+            <input type="text" id="roll" name=""roll>
+            <button onclick="fetch()">Fetch</button>
+        
+        <h3 id="demo"></h3>
+        <script>
+            function fetch(){
+                var txt="";
+                
+                 var xhttp=new XMLHttpRequest();
+                 xhttp.onreadystatechange=function(){
+                    console.log("enters onreasy");
+                    if(this.readyState==4 && this.status==200){
+                        console.log("enters ready");
+                        var xmldoc=xhttp.responseXML;
+                        var x=xmldoc.getElementsByTagName("student");
+                        console.log(x[0]);
+                        var roll=document.getElementById("roll").value;
+                        for(var i=0;i<x.length;i++){
+                            if(roll==x[i].getElementsByTagName("roll")[0].childNodes[0].nodeValue){
+                                txt+="name="+x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue+
+                                "<br>dept="+x[i].getElementsByTagName("dept")[0].childNodes[0].nodeValue;
+                            }
+                        }
+                        console.log(txt);
+                        document.getElementById("demo").innerHTML=txt;
+                    }
+                 };
+                 xhttp.open("GET","db.xml",true);
+                 xhttp.send();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="customerStyle.xsl"?> 
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<organization>
+    <customers>
+        <customer>
+            <cid>01</cid>
+            <cname>Priya</cname>
+        </customer>
+        <customer>
+            <cid>02</cid>
+            <cname>Ashwin</cname>
+        </customer>
+    </customers>
+    <accounts>
+        <account>
+            <ano>101</ano>
+            <atype>S</atype>
+            <abalance>1000</abalance>
+            <cid>01</cid>
+        </account>
+        <account>
+            <ano>102</ano>
+            <atype>C</atype>
+            <abalance>5000</abalance>
+            <cid>02</cid>
+        </account>
+    </accounts>
+    <transactions>
+        <transaction>
+            <tid>501</tid>
+            <ano>101</ano>
+            <ttype>D</ttype>
+            <tdate>15/6/22</tdate>
+            <tamt>500</tamt>
+        </transaction>
+        <transaction>
+            <tid>502</tid>
+            <ano>102</ano>
+            <ttype>W</ttype>
+            <tdate>17/6/22</tdate>
+            <tamt>2500</tamt>
+        </transaction>
+    </transactions>
+</organization>

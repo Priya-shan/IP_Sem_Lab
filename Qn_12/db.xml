@@ -1,0 +1,12 @@
+<college>
+    <student>
+        <name>priya</name>
+        <roll>83</roll>
+        <dept>cse</dept>
+    </student>
+    <student>
+        <name>ashwin</name>
+        <roll>14</roll>
+        <dept>ece</dept>
+    </student>
+</college>
