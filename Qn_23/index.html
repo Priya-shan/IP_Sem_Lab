@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS FormValidation</title>
+    </head>
+    <body>
+        <h2 id="demo"></h2>
+        <form name="loginform" onsubmit="return validateform();">
+            <span><label>FirstName</label></span>
+            <input type="text" id="fname" name="fname">
+            <br>
+            <span><label>LastName</label></span>
+            <input type="text" id="lname" name="lname">
+            <br>
+            <span><label>Mail</label></span>
+            <span><input type="text" id="mail" name="mail"></span>
+            <span><label id="emailerror"></label></span>
+            <br>
+            <span><label>Address</label></span>
+            <input type="text" id="add" name="add">
+            <br>
+            <span><label>City</label></span>
+            <input type="text" id="city" name="city">
+            <br>
+            <span><label>State(2 characters in capital)</label></span>
+            <span><input type="text" id="state" name="state"></span>
+            <span><label id="stateerror"></label></span>
+            <br>
+            <span><label>Country</label></span>
+            <input type="text" id="cntry" name="cntry">
+            <br>
+            <span><label>Pincode</label></span>
+            <span><input type="text" id="pin" name="pin"></span>
+            <span><label id="pinerror"></label></span>
+            <br>
+            <span><label>UserName</label></span>
+            <input type="text" id="uname" name="uname">
+            <br>
+            <span><label>Password</label></span>
+            <input type="password" id="pw" name="pw">
+            <br>
+            <input type="submit" value="submit">
+        </form>
+        <script>
+            
+            function validateform(){
+             var fname=document.forms["loginform"]["fname"].value;
+            var lname=document.forms["loginform"]["lname"].value;
+            var email=document.forms["loginform"]["mail"].value;
+            var add=document.forms["loginform"]["add"].value;
+            var city=document.forms["loginform"]["city"].value;
+            var cntry=document.forms["loginform"]["cntry"].value;
+            var pin=document.forms["loginform"]["pin"].value;
+            var pw=document.forms["loginform"]["pw"].value;
+            var uname=document.forms["loginform"]["uname"].value;
+            var state=document.forms["loginform"]["state"].value;
+            var flag=0;
+                if(fname=="" || lname=="" || add=="" || city=="" || cntry=="" || pin=="" || pw=="" || uname==""){
+                    document.getElementById("demo").innerHTML="All fields should be entered !!";
+                    flag=1;
+                }
+                if(pin.length!=6){
+                    document.getElementById("pinerror").innerHTML="**pincode must be exaclty 6 numbers";
+                    flag=1;
+                }
+                if(state.length!=2){
+                    document.getElementById("stateerror").innerHTML="**state must be exaclty 2 characters";
+                    flag=1;
+                }
+                if(!(/^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/.test(email)) || email.length<6){
+                flag=1;
+                document.getElementById("emailerror").innerHTML="&emsp;&emsp;*Email format is incorrect";
+                }
+                if(flag==1){
+                    return false;
+                }
+                else{
+                return true;
+                }
+            }
+        </script>
+    </body>
+</html>

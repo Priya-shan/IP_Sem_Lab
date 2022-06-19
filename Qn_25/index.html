@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <h1>Welcome !!</h1>
+        <h2 id="demo"></h2>
+        <script>
+            var uname=window.prompt("Enter your Name : ");
+            alert("welcome"+uname);
+            var today=new Date();
+
+            var date=today.getDate();
+            var month=today.getMonth();
+            var mnth=["January","Feburary","March","April","May",
+            "June","July","August","September","october","November","December"];
+            
+            var yr=today.getFullYear();
+            var res=""+mnth[month]+"  "+date+"  "+yr;
+            document.getElementById("demo").innerHTML=res+"<br>"+document.lastModified.substring(0,10);
+            window.status="some text";
+        </script>
+    </body>
+</html>
