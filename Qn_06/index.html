@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <form onsubmit="findoc()">
+        <span><label>Enter Text :</label></span>
+        <input type="text" id="txt" name="txt">
+        <br>
+        <span><label>Enter Character :</label></span>
+        <input type="text" id="ch" name="ch">
+        <br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function findoc(){
+            var txt=document.getElementById("txt").value;
+            var ch=document.getElementById("ch").value;
+            var cnt=0;
+            for(var i=0;i<txt.length;i++){
+                if(txt.charAt(i)==ch){
+                    cnt++;
+                }
+            }
+            alert(cnt);
+        }
+    </script>
+</body>
+</html>
