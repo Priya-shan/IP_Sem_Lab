@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <form name="loginform" onsubmit="return valuateform();">
+        <span><label>Name</label></span>
+        <input type="text" id="uname" name="uname"/>;
+        <br>
+        <span><label>Age</label></span>
+        <input type="number" id="age" name="age"/>;
+        <br>
+        <span><label>EmailId</label></span>
+        <input type="text" id="mail" name="mail"/>;
+        <br>
+        <span><label>Gender</label></span>
+        <input type="radio" id="mgen" name="gen">
+        <label>Male</label>
+        <input type="radio" id="fgen" name="gen">
+        <label>Female</label>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+
+    <script>
+        function valuateform(){
+            var name=document.getElementById("uname").value;
+            var age=document.forms["loginform"]["age"].value;
+            var mail=document.getElementById("mail").value;
+            var flag=0;
+            if(!mail.includes("@") || !mail.includes(".")){
+                flag=1;
+                document.getElementById("demo").innerHTML="email format incorrect";
+            }
+            if(age<1 || age>100){
+                flag=1;
+                document.getElementById("demo").innerHTML="age  format incorrect";
+            }
+            if(!document.getElementById("mgen").checked || !document.getElementById("fgen").checked ){
+                flag=1;
+                document.getElementById("demo").innerHTML="gen not selected";
+            }
+            
+            if(flag==1){
+                return false;
+            }
+            else{
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>

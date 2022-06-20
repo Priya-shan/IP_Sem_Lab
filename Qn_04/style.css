@@ -1,0 +1,12 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-decoration: underline;
+}
+li{
+    font-weight: bold;
+}
+ul{
+    margin-left: 20px;
+}
